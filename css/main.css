@@ -1,0 +1,15 @@
+/* Removal of browser default settings */
+
+{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+
+/* General settings */
+
+* {
+    background-color: #2B3257;
+    scroll-behavior: smooth
+}
