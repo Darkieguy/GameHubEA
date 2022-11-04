@@ -1,15 +1,643 @@
-/* Removal of browser default settings */
-
-{
-    padding: 0;
-    border: 0;
-    margin: 0;
-}
-
-
 /* General settings */
 
 * {
-    background-color: #2B3257;
+    padding: 0;
+    border: 0;
+    margin: 0;
     scroll-behavior: smooth
+}
+
+/* Background color */
+
+html {
+    background-color: #2B3257;
+    margin-bottom: 22vw;
+}
+
+/* Navigationbar for mobile */
+
+@media (max-width:500px) {
+    .navbarmobile {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        justify-content: center;
+        justify-content: space-around;
+        bottom: 0;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        width: 100%;
+        background-color: #1B203D;
+        border-top: 0.7vw #3f3f3f;
+        border-style: solid;
+    }
+}
+
+.navbarmobile a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 4vw;
+}
+
+.navicon
+ {
+    height: 9vw;
+    width: 9vw;
+}
+
+                                            /* >>> HOMEPAGE <<< */
+
+/* Logo on homepage */
+
+.logohome {
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+    display: block;
+    background-color: #13BA24;
+    border-radius: 8vw 8vw 8vw 8vw;
+    padding: 1vw;
+}
+
+/* Welcome to Game Hub text */
+
+.welcome {
+    color: beige;
+    padding-top: 2vw;
+    padding-bottom: 10vw;
+    font-size: 3vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Featured, Discount and Upcomming textbox */
+
+.featured,
+.discount,
+.upcomming {
+    height: 10vw;
+    width: 50%;
+    background-color: #1B203D;
+    border-radius: 0vw 10vw 0vw 0vw;
+    text-align: center;
+    font-size: 8vw;
+    color: #00FFD1;
+    border-right: 2px #3f3f3f;
+    border-top: 2px #3f3f3f;
+    border-style: solid;
+}
+
+.discount {
+    margin-top: 1.5em;
+    color: #FAFF00;
+}
+
+.upcomming {
+    margin-top: 1.5em;
+    color: #46CE24;
+}
+
+/* Game cover for Black, Racing and Furious at home page for mobile */
+
+.blackhomem,
+.racinghomem,
+.furioushomem {
+    width: 100%;
+    height: auto;
+    margin-bottom: -4px;
+    border-top: 2px #3f3f3f;
+    Border-bottom: 2px #3f3f3f;
+    border-style: solid;
+}
+
+/* Buy button for Black, Racing and Furious at home page for mobile */
+
+.buyblackhome,
+.buyracinghome,
+.buyfurioushome {
+    margin-right: -4px;
+    height: 3.47em;
+    width: 50%;
+    background-color: #1B203D;
+    color: #CD6F2B;
+    font-size: 5vw;
+    border-radius: 0vw 0vw 0vw 10vw;
+    border-bottom: 2px #3f3f3f;
+    border-left: 2px #3f3f3f;
+    border-style: solid;
+}
+
+/* Info button for Black, Racing and Furious at home page for mobile */
+
+.infoblackhome,
+.inforacinghome,
+.infofurioushome {
+    height: 3.47em;
+    width: 50%;
+    background-color: #1B203D;
+    color: white;
+    font-size: 5vw;
+    border-radius: 0vw 0vw 10vw 0vw;
+    border-left:1px #3f3f3f;
+    border-bottom: 2px #3f3f3f;
+    border-right: 2px #3f3f3f;
+    border-style: solid;
+}
+
+                                            /* >>> GAMELIST <<< */
+
+/* Page title: Gamelist */
+
+.gamelisttitle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 10vw;
+}
+
+.helmetgamelist {
+    height: auto;
+    width: 32vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+}
+
+/* All game covers and buy/info buttons */
+
+.gamecovers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Game covers connected to their buy/info buttons */
+
+.coverandbox {
+    display:flex;
+    flex-direction: column;
+}
+
+.gametitlelist {
+    height: 1.2em;
+    width: 46.8vw;
+    background-color: #1B203D;
+    border-radius: 10vw 10vw 0vw 0vw;
+    text-align: center;
+    font-size: 5vw;
+    color: #ffffffde;
+    border-right: 2px #3f3f3f;
+    border-top: 2px #3f3f3f;
+    border-left: 2px #3f3f3f;
+    border-style: solid;
+}
+
+/* Game cover image-settings */
+
+.gameimage {
+    width: 46.8vw;
+    height: auto;
+    border-bottom: 2px #3f3f3f;
+    border-left: 2px #3f3f3f;
+    border-right: 2px #3f3f3f;
+    border-top: 2px #3f3f3f;
+    border-style: solid;
+}
+
+/* Settings for buybox */
+ 
+.buyboxgames {
+    color: #CD6F2B;
+    border-radius: 0vw 0vw 0vw 5vw;
+    border-left: 2px #3f3f3f;
+}
+
+/* Settings for infobox */
+
+.infoboxgames {
+    color: white;
+    border-radius: 0vw 0vw 5vw 0vw;  
+    margin-left: -4px;
+    border-left:1px #3f3f3f;
+    border-right: 2px #3f3f3f;
+}
+
+/* Shared settings for buy/infobox */
+
+.buyboxgames,
+.infoboxgames {
+    height: 3em;
+    width: 50%;
+    background-color: #1B203D;
+    font-size: 3.5vw;
+    text-align: center;
+    border-bottom: 2px #3f3f3f;
+    border-style: solid;
+    margin-bottom: 8vw;
+}
+
+                                            /* >>> About <<< */
+
+/* Page title */
+
+.abouttitle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 10vw;
+}
+
+/* Pageicon */
+
+.bookabout {
+    height: auto;
+    width: 32vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+}
+
+/* Image of a town in Germany */
+
+.townpic {
+    height: auto;
+    width: 65%;
+    margin-left: 5%;
+    border-radius: 25vw 25vw 25vw 25vw;
+    border: 1vw #3f3f3f;
+    border-style: solid;
+    margin-bottom: -9vw;
+}
+
+/* Page text */
+
+.ghstarted,
+.ourgoal,
+.teamthree {
+    color: white;
+    font-size: 4vw;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 5%;    
+}
+
+/* Text: Our goal is to distribute~ */
+
+.ourgoal {
+    margin-top: 4%;
+}
+
+/* Text: We are currently a team~ */
+
+.teamthree {
+    margin-top: 1%;
+}
+
+/* Image of three people working */
+
+.staffimg {
+    height: auto;
+    width: 60%;
+    margin-left: 33%;
+    border-radius: 3vw 3vw 3vw 3vw;
+    border: 1vw #3f3f3f;
+    border-style: solid;
+}
+
+                                            /* >>> CONTACT <<< */
+
+.scrollcontact {
+    height: auto;
+    width: 32vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+}
+
+.contacttitle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 10vw;
+}
+
+.contacttext {
+    color: white;
+    font-size: 8vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.ss,
+.afj {
+    margin-top: 5%;
+}
+
+
+                                            /* >>> GAME INFO <<< */
+
+.gititle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+
+.gipics {
+    height: auto;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.gamedesc {
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    display: block;
+    margin: 4vw;
+}
+
+.giinfotext {
+    color: black;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.detailtexta {
+    padding-top: 2vw;
+}
+
+.detailtextc,
+.detailtexte,
+.detailtextg,
+.detailtexti {
+    margin-top: 2vw;
+}
+
+.gibuy {
+    display:flex;
+    justify-content: right;
+    margin-right: 5vw;
+    margin-top: -14vw;
+    padding-bottom: 4vw;
+}
+
+.gibutton {
+    color:#CD6F2B;  
+    background-color: #1B203D;
+    text-decoration-color: white;
+    font-size: 7vw;
+    padding: 5vw;
+    border-radius: 150vw 150vw 150vw 150vw;
+}
+
+                                            /* >>> CHECKOUT <<< */
+
+/* Checkout image of hands dropping coins */
+
+.paycheckout {
+    height: auto;
+    width: 32vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+    margin-bottom: -5.5vw;
+}
+
+/* Checkout page title */
+
+.cotitle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+
+/* Background for product image and details */
+
+.chosenproductbox {
+    background-color: #a5a4a4 ;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 3vw;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5vw #3f3f3f;
+}
+
+/* Chosen product image */
+
+.blackcheckout {
+    height: auto;
+    width: 40%;
+    margin-left: 5%;
+}
+
+/* Chosen product detail text */
+
+.productinfo {
+    font-size: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 4%
+
+}
+
+/* Text="Current purchase of:" */
+
+.checktexta {
+    margin-bottom: -3vw;
+    font-weight: 600;
+}
+
+/* Text="Compatability" */
+
+.checktextc {
+    margin-bottom: -3vw;
+    font-weight: 600;
+}
+
+/* Background for bill info */
+
+.billinfobox {
+    background-color: #a5a4a4;
+    padding: 4vw;
+    margin-left: 3%;
+    margin-right: 3%;
+    border: solid 0.5vw #3f3f3f;
+}
+
+.billingtitle {
+    font-size: 7vw;
+    margin-top: 4%;
+    margin-left: 3.7vw;
+    padding-bottom: 5vw;
+}
+
+.billinputboxes {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.inputtitle {
+    padding-left: 4.3vw;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+}
+
+.inputbox {
+    width: 90%;
+    padding: 1vw;
+    font-size: 5vw;
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom: 4vw;
+}
+
+/* Background for payment method */
+
+.paymentbox {
+    margin-top: 3vw;
+    background: #a5a4a4;
+    padding: 4vw;
+    margin-left: 3%;
+    margin-right: 3%;
+    border: solid 0.5vw #3f3f3f;
+}
+
+.paymenttitle {
+    font-size: 7vw;
+    padding-top: 4vw;
+    padding-left: 5vw;
+}
+
+.cardrow {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+
+}
+
+.cardimg {
+    height: auto;
+    width: 65%;
+    margin-top: -5vw;
+    margin-bottom: -5vw;
+}
+
+.chosenmethod {
+    font-size: 6vw;
+    font-weight: 600;
+    margin-top: 31.5vw;
+}
+
+.changemethod {
+    font-size: 4vw;
+    margin-top: 33.5vw;
+    margin-left: 1vw;
+    font-weight: 600;
+    color: #f0062d;
+    text-decoration: underline;
+}
+
+.expirationrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.methodinputbox {
+    width: 10%;
+    padding: 1vw;
+}
+
+.checkoutbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checkoutbuttonbox {
+    width: 47vw;
+}
+
+.checkoutbuy,
+.checkoutcancel {
+    background-color: #1B203D;
+    border-bottom:0.5vw solid #3f3f3f; 
+    border-right:0.5vw solid #3f3f3f;  
+    font-size: 7vw;
+    width: 100%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    text-decoration: underline;
+}
+
+.checkoutbuy {
+    color: #CD6F2B;
+    border-radius: 0vw 0vw 0vw 5vw;
+    border-left:0.5vw solid #3f3f3f;
+}
+
+.checkoutcancel{
+    color: #f0062d;
+    border-radius: 0vw 0vw 5vw 0vw;
+}
+
+                                            /*>>> RECEIPT <<<*/
+
+/* Receipt image of treasure chest */
+
+.receipttreasure {
+    height: auto;
+    width: 32vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+    margin-bottom: -5.5vw;
+}
+
+/* Receipt page title */
+
+.receipttitle {
+    font-size: 10vw;
+    color: beige;
+    text-align: center;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+
+.receiptmessage {
+    background-color: #a5a4a4;
+    border: solid 0.5vw #3f3f3f;
+    width: 52%;
+    font-size: 1.5em;
+    margin-left: 25%;
+    padding: 1vw;
+    text-align: center;
 }
