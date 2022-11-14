@@ -7,77 +7,110 @@
     scroll-behavior: smooth
 }
 
-/* Background color */
 
 html {
     background-color: #2B3257;
-    margin-bottom: 22vw;
+    margin: 1.5rem 0 6rem 0;
 }
 
-/* Navigationbar for mobile */
 
-@media (max-width:500px) {
-    .navbarmobile {
-        display: flex;
-        flex-direction: row;
-        position: fixed;
-        justify-content: center;
-        justify-content: space-around;
-        bottom: 0;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-        width: 100%;
-        background-color: #1B203D;
-        border-top: 0.7vw #3f3f3f;
-        border-style: solid;
+@media (min-width:430px) {
+    html {
+        margin-top: 6rem;
     }
 }
 
-.navbarmobile a {
+/* Navigationbar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    background-color: #1B203D;
+}
+
+.navbar a {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: white;
     text-decoration: none;
-    font-size: 4vw;
+    font-size: 16px;
 }
 
-.navicon
- {
-    height: 9vw;
-    width: 9vw;
+.navicon{
+    height: auto;
+    width: 2.5rem;
 }
+
+@media (max-width:429px) {
+    .navbar {
+        justify-content: space-around;
+        bottom: 0;
+        padding: 0.5rem 0rem;
+        border-top: 0.2rem #3f3f3f;
+        border-style: solid;
+    }    
+}
+
+@media (min-width: 430px) {
+    .navbar {
+        justify-content: left;
+        top: 0;
+        padding: 0.2rem 0rem;
+        border-bottom: solid 0.2rem #3f3f3f;
+        border-right: solid 0.2rem #3f3f3f;
+        border-radius: 0 0 50px 0;
+    }
+
+    .navbar a {
+        padding: 0 1.3rem;
+    }
+}
+
 
                                             /* >>> HOMEPAGE <<< */
 
-/* Logo on homepage */
+/* Logo and text: Welcome to Game Hub */
 
 .logohome {
     width: 75%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
     display: block;
-    background-color: #13BA24;
-    border-radius: 8vw 8vw 8vw 8vw;
-    padding: 1vw;
+    margin: 0px auto 0px auto;
+    background-color: #356e3b;
+    border-radius: 45px 45px 45px 45px;
+    padding: 1em;
 }
-
-/* Welcome to Game Hub text */
 
 .welcome {
     color: beige;
-    padding-top: 2vw;
-    padding-bottom: 10vw;
     font-size: 3vw;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto 4em auto;
 }
 
-/* Featured, Discount and Upcomming textbox */
+@media (min-width: 700px) {
+    .logohome {
+        width: 524px;
+    }
+    .welcome {
+        font-size: 21px;
+    }
+}
+
+/* Homepage content */
+
+.gameswrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+/* Gamecover tabs */
 
 .featured,
 .discount,
@@ -89,110 +122,173 @@ html {
     text-align: center;
     font-size: 8vw;
     color: #00FFD1;
-    border-right: 2px #3f3f3f;
-    border-top: 2px #3f3f3f;
-    border-style: solid;
+    border: solid 2px #3f3f3f;
+    border-bottom: none;
 }
 
 .discount {
-    margin-top: 1.5em;
     color: #FAFF00;
 }
 
 .upcomming {
-    margin-top: 1.5em;
     color: #46CE24;
 }
 
-/* Game cover for Black, Racing and Furious at home page for mobile */
+@media (min-width: 430px) {
+    .featured,
+    .discount,
+    .upcomming {
+        width: 215px;
+        height: 44px;
+        font-size: 34px;
+    }
+}
 
-.blackhomem,
-.racinghomem,
-.furioushomem {
+@media (min-width: 900px) {
+    .featured,
+    .discount,
+    .upcomming {
+        width: 350px;
+        height: 44px;
+        font-size: 34px;
+    }
+}
+
+/* Game covers and ingame photos */
+
+.gamecovers,
+.ingame {
     width: 100%;
     height: auto;
-    margin-bottom: -4px;
-    border-top: 2px #3f3f3f;
-    Border-bottom: 2px #3f3f3f;
+    border: 2px #3f3f3f;
     border-style: solid;
 }
 
-/* Buy button for Black, Racing and Furious at home page for mobile */
+@media (min-width: 430px) {
+    .gamecovers,
+    .ingame {
+        width: 430px;
+    }
+}
 
-.buyblackhome,
-.buyracinghome,
-.buyfurioushome {
-    margin-right: -4px;
-    height: 3.47em;
-    width: 50%;
+@media (max-width: 900px) {
+    .ingame {
+        display: none;
+    }    
+}
+
+@media (min-width: 900px) {
+    .img-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .furious-home {
+        
+        margin: 0 0 0 0;
+    }
+}
+
+/* Buy and info buttons  */
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-index {
+    margin: -4px auto 3rem auto;
+    height: 14vw;
+    width: 50vw;
     background-color: #1B203D;
+    font-size: 5vw;
+    border: solid 2px #3f3f3f;
+    border-top: 0;
+}
+
+.buybtn-index { 
     color: #CD6F2B;
-    font-size: 5vw;
-    border-radius: 0vw 0vw 0vw 10vw;
-    border-bottom: 2px #3f3f3f;
-    border-left: 2px #3f3f3f;
-    border-style: solid;
+    border-radius: 0 0 0 50px;
 }
 
-/* Info button for Black, Racing and Furious at home page for mobile */
-
-.infoblackhome,
-.inforacinghome,
-.infofurioushome {
-    height: 3.47em;
-    width: 50%;
-    background-color: #1B203D;
+.infobtn-index {
     color: white;
-    font-size: 5vw;
-    border-radius: 0vw 0vw 10vw 0vw;
-    border-left:1px #3f3f3f;
-    border-bottom: 2px #3f3f3f;
-    border-right: 2px #3f3f3f;
-    border-style: solid;
+    border-radius: 0 0 50px 0;
+}
+
+@media (min-width: 430px) {
+    .btn-index {
+        width: 217px;
+        height: 60px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 900px) {
+    .btn-index {
+        width: 434px;
+    }
+    .btn-furious{
+        width:217px;
+    }
 }
 
                                             /* >>> GAMELIST <<< */
 
-/* Page title: Gamelist */
+/* Page title and helmet logo */
+
+.helmetgamelist {
+    height: auto;
+    width: 44vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .gamelisttitle {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 10vw;
+    margin-bottom: 5rem;
 }
 
-.helmetgamelist {
-    height: auto;
-    width: 32vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
+@media (min-width: 430px) {
+    .helmetgamelist {
+        width: 120px;
+        height: auto;
+        margin-left: 4rem;
+    }
+    .gamelisttitle {
+        font-size: 44px;
+        margin: 0 auto 3rem 2.5rem;
+        text-align: left;
+    }
 }
 
-/* All game covers and buy/info buttons */
+/* All game covers, gametabs and buy/info buttons */
 
-.gamecovers {
+.list-products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0 auto 0 auto;
+    max-width: 1500px;
 }
-
-/* Game covers connected to their buy/info buttons */
 
 .coverandbox {
-    display:flex;
+    display: flex;
     flex-direction: column;
+
 }
 
-.gametitlelist {
-    height: 1.2em;
-    width: 46.8vw;
+.gametab-list {
+    height: 30px;
+    width: 260px;
     background-color: #1B203D;
-    border-radius: 10vw 10vw 0vw 0vw;
+    border-radius: 40px 40px 0 0;
     text-align: center;
-    font-size: 5vw;
+    vertical-align: text-bottom;
+    font-size: 22px;
     color: #ffffffde;
     border-right: 2px #3f3f3f;
     border-top: 2px #3f3f3f;
@@ -200,136 +296,246 @@ html {
     border-style: solid;
 }
 
-/* Game cover image-settings */
+@media (min-width: 592px) {
+    .gametab-list {
+        font-size: 24px;
+    }
+    .coverandbox {
+        padding: 1rem;
+    }
+}
+
+/* Game cover image settings */
 
 .gameimage {
-    width: 46.8vw;
+    width: 260px;
     height: auto;
-    border-bottom: 2px #3f3f3f;
-    border-left: 2px #3f3f3f;
-    border-right: 2px #3f3f3f;
-    border-top: 2px #3f3f3f;
+    border: 2px #3f3f3f;
     border-style: solid;
 }
 
-/* Settings for buybox */
+/* Buy and more info buttons */
  
 .buyboxgames {
     color: #CD6F2B;
-    border-radius: 0vw 0vw 0vw 5vw;
+    border-radius: 0 0 0 40px;
     border-left: 2px #3f3f3f;
 }
 
-/* Settings for infobox */
-
 .infoboxgames {
     color: white;
-    border-radius: 0vw 0vw 5vw 0vw;  
+    border-radius: 0 0 40px 0;  
     margin-left: -4px;
     border-left:1px #3f3f3f;
     border-right: 2px #3f3f3f;
 }
 
-/* Shared settings for buy/infobox */
-
 .buyboxgames,
 .infoboxgames {
-    height: 3em;
-    width: 50%;
+    height: 50px;
+    width: 132px;
     background-color: #1B203D;
-    font-size: 3.5vw;
+    font-size: 18px;
     text-align: center;
     border-bottom: 2px #3f3f3f;
     border-style: solid;
-    margin-bottom: 8vw;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 259px) {
+    .gametab-list {
+        width: 100%;
+    }
+    .gameimage {
+        width: 100%;
+        height: auto;
+    }
+    .gamelist-btns {
+        width: 50%;
+        font-size: 6vw;
+    }
 }
 
                                             /* >>> About <<< */
 
-/* Page title */
+/* Page title and logo */
+
+.bookabout {
+    height: auto;
+    width: 28vw;
+    display: block;
+    margin: 0 auto 0 auto;
+}
 
 .abouttitle {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 10vw;
+    margin-bottom: 12vw;
 }
 
-/* Pageicon */
+@media (min-width: 430px) {
+    .bookabout {
+        width: 120px;
+        height: auto;
+        margin-left: 4rem;
+    }
+    .abouttitle {
+        font-size: 44px;
+        margin: 0 auto 4rem 4rem;
+        text-align: left;
+    }
+}
 
-.bookabout {
-    height: auto;
-    width: 32vw;
+@media (min-width: 1080px) {
+    .abouttitle {
+        margin-bottom: 0rem;
+    }
+}
+
+/* Images and text */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.town-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 12vw 3vw;
+}
+
+.staff-column {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin: 0 5vw 0 auto;
+}
+
+/* Images */
+
+.about-img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
+    height: 37.5vw;
+    width: 55vw;
+    border: 5px #3f3f3f;
+    border-style: solid;
 }
-
-/* Image of a town in Germany */
 
 .townpic {
-    height: auto;
-    width: 65%;
-    margin-left: 5%;
-    border-radius: 25vw 25vw 25vw 25vw;
-    border: 1vw #3f3f3f;
-    border-style: solid;
-    margin-bottom: -9vw;
+    border-radius: 300px 300px 300px 300px;
 }
 
-/* Page text */
+.staffimg {
+    border-radius: 20px 20px 20px 20px;
+}
+
+@media (min-width: 480px) {
+    .townpic {
+        height: 180px;
+        width: 240px;
+    }
+    .staffimg {
+        width: 264px;
+        height: 180px;
+    }
+}
+
+@media (min-width: 496px) {
+    .town-row{
+        align-self: center;
+        margin: 0 3rem 0 0;
+    }
+    .staff-column{
+        align-self: center;
+        margin: 3rem 1rem 0 10.7rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .town-row{
+        margin: 1rem 5rem auto 0;
+    }
+    .about-img {
+        height: 397px;
+        width: 594px;
+    }
+    .staff-column{
+        margin: 3rem 0 auto 29rem;
+    }
+}
+
+/* Text */
 
 .ghstarted,
 .ourgoal,
 .teamthree {
     color: white;
-    font-size: 4vw;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    margin-right: 5%;    
+    font-size: 4.3vw;
+    text-align: center;
 }
 
-/* Text: Our goal is to distribute~ */
+.ghstarted,
+.ourgoal {
+    display:flex;
+    flex-direction: column;
+    margin: 0vw 0 0 -9vw;
+}
+
+.ghstarted {
+    margin-top: -1rem;
+}
 
 .ourgoal {
-    margin-top: 4%;
+    margin-top: 1.8rem;
 }
-
-/* Text: We are currently a team~ */
 
 .teamthree {
-    margin-top: 1%;
+    margin-top: 1rem;
 }
 
-/* Image of three people working */
+@media (min-width: 430px) {
+    .ghstarted,
+    .ourgoal,
+    .teamthree {
+        font-size: 19px;
+    }
+    .ghstarted,
+    .ourgoal {
+        margin-left: -2rem; 
+    }   
+    .ourgoal{
+        margin-top: 2.5rem;
+    }
+}
 
-.staffimg {
-    height: auto;
-    width: 60%;
-    margin-left: 33%;
-    border-radius: 3vw 3vw 3vw 3vw;
-    border: 1vw #3f3f3f;
-    border-style: solid;
+@media (min-width: 1080px) {
+    .ghstarted,
+    .ourgoal,
+    .teamthree {
+        font-size: 26px;
+    }
+    .ourgoal {
+        margin-top: 11.5rem;
+    }
 }
 
                                             /* >>> CONTACT <<< */
 
 .scrollcontact {
     height: auto;
-    width: 32vw;
+    width: 28vw;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
+    margin: 0 auto 0 auto;
 }
 
 .contacttitle {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 10vw;
+    margin-bottom: 3rem;
 }
 
 .contacttext {
@@ -338,242 +544,607 @@ html {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 25%;
 }
 
 .ss,
 .afj {
-    margin-top: 5%;
+    margin-top: 2rem;
 }
 
+@media (min-width: 430px) {
+    .scrollcontact{
+        width: 120px;
+    }
+    .contacttitle {
+        font-size: 44px;
+    }
+    .contacttext {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .scrollcontact {
+        margin-left: 4rem;
+    }
+    .contacttitle {
+        margin: 0 auto 4rem 4rem;
+        text-align: left;
+    }
+    .contacttext {
+        font-size: 38px;
+        margin: 10rem auto auto auto;
+    }
+}
 
                                             /* >>> GAME INFO <<< */
 
-.gititle {
+/* Logo and text */
+
+.infoicon {
+    height: auto;
+    width: 28vw;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.gi-title {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 5vw;
-    margin-top: 5vw;
+    margin-bottom: 12vw;
 }
 
-.gipics {
+@media (min-width: 431px) {
+    .infoicon {
+        width: 120px;
+        height: auto;
+        margin-left: 4rem;
+    }
+    .gi-title {
+        font-size: 44px;
+        margin: 0 auto 4rem 1rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1080px) {
+    .gi-title {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Page content */
+
+.gi-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* Images */
+
+.gi-pics {
     height: auto;
     width: 100%;
-    margin-bottom: -4px;
 }
+
+.playbox-column {
+    order:6;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 431px) {
+    .gi-pics {
+        width: 430px;
+        border: solid 2px #3f3f3f;
+    }
+}
+
+@media (min-width: 1080px) {
+    .gi-wrapper {
+        flex-direction: row;
+        background-color: #1B203D;
+        width: 1046px;
+        margin: 0 auto 0 auto;
+        border: solid 2px #3f3f3f;
+        align-items: unset;
+    }
+    .gi-pics{
+        width:260px;
+        border: none;
+    }
+    .gi-black,
+    .gi-gas,
+    .gi-alley {
+        border-right: solid 2px #3f3f3f;
+        border-bottom: solid 2px #3f3f3f;
+    }
+    .gi-black {
+        order:1;
+    }
+    .gi-gas {
+        order:2;
+    }
+    .gi-alley {
+        order:3;
+    }
+    .gi-tunnel {
+        order:4;
+        border-bottom: solid 2px #3f3f3f;
+    }
+    .gi-playbox {
+        width:260px;
+    }    
+}
+
+/* Text */
 
 .gamedesc {
     color: white;
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
     display: block;
-    margin: 4vw;
+    padding: 20px 9vw;
+    background-color: #1B203D;
+}
+
+.detailbox {
+    background-color: #c4c4c4;
+    width: 100vw;
+    height: 117vw;
 }
 
 .giinfotext {
     color: black;
-    background-color: grey;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 4vw;
+    font-size: 6vw;
 }
 
 .detailtexta {
-    padding-top: 2vw;
+    margin-top: 2vw;
+    font-weight: 600;
 }
 
-.detailtextc,
-.detailtexte,
-.detailtextg,
-.detailtexti {
-    margin-top: 2vw;
+@media (min-width: 431px) {
+    .gamedesc {
+        width: 430px;
+        border: solid 2px #3f3f3f;
+        padding: 20px 0;
+        font-size: 20px;
+    }
+    .detailbox {
+        width: 430px;
+        height: 30rem;
+        border: solid 2px #3f3f3f;
+    }
+    .giinfotext {
+        font-size: 26px;
+    }
+    .detailtexta {
+        margin-top: 0.7rem;
+    }
 }
+
+@media (min-width: 1080px) {
+    .gamedesc { 
+        order: 5;
+        display:inline;
+        margin: 2rem auto 0 3rem;
+        border: none;
+    }
+    .detailbox {
+        order:7;
+        height: 23rem;
+        margin: 0 0 0 auto;
+        width: 260px;
+        border: none;
+    }
+    .detailtext {
+        font-size: 18px;
+    }
+    .detailtexta{
+        margin-top: 0.7rem;
+    }
+}
+
+/* Button */
 
 .gibuy {
-    display:flex;
-    justify-content: right;
-    margin-right: 5vw;
-    margin-top: -14vw;
+    margin: 5vw 0 0 0;
     padding-bottom: 4vw;
 }
 
 .gibutton {
     color:#CD6F2B;  
     background-color: #1B203D;
-    text-decoration-color: white;
     font-size: 7vw;
-    padding: 5vw;
-    border-radius: 150vw 150vw 150vw 150vw;
+    padding: 1.5rem 2.5rem;
+    border-radius: 1500px 1500px 1500px 1500px;
+}
+
+@media (min-width: 431px) {
+    .gibuy {
+        margin: 5px 0 0 0;
+    }
+    .gibutton {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .gibuy { 
+        margin: 5px 0 0 0;
+    }
+    .gibutton:hover {
+        background-color: #2B3257;
+    }
+    .gibutton {
+        font-size: 26px;
+    }
 }
 
                                             /* >>> CHECKOUT <<< */
 
-/* Checkout image of hands dropping coins */
+/* Title and logo */
 
 .paycheckout {
     height: auto;
-    width: 32vw;
+    width: 28vw;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
-    margin-bottom: -5.5vw;
+    margin: 0 auto 0 auto;
 }
-
-/* Checkout page title */
 
 .cotitle {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 5vw;
-    margin-top: 5vw;
+    margin-bottom: 12vw;
 }
 
-/* Background for product image and details */
+@media (min-width: 430px) {
+    .paycheckout {
+        width: 120px;
+        height: auto;
+        margin-left: 3rem;
+    }
+    .cotitle {
+        font-size: 44px;
+        margin: 0 auto 4rem 1rem;
+        text-align: left;
+    }
+}
 
-.chosenproductbox {
-    background-color: #a5a4a4 ;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-bottom: 3vw;
-    margin-left: 3%;
-    margin-right: 3%;
+@media (min-width: 1080px) {
+    .cotitle {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Product image and details */
+
+.product-box {
     display: flex;
     flex-direction: row;
-    border: solid 0.5vw #3f3f3f;
+    justify-content:space-evenly;
+    background-color: #1B203D;
+    margin: 0 1vw 3vw 1vw;
+    border: solid 2px #3f3f3f;
 }
 
-/* Chosen product image */
-
-.blackcheckout {
+.product-img {
     height: auto;
-    width: 40%;
-    margin-left: 5%;
-}
+    width: 45%;
+    border: solid 2px #3f3f3f;
+    margin: 2vw 0 2vw 2vw;
 
-/* Chosen product detail text */
+}
 
 .productinfo {
-    font-size: 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    margin: 1vw auto 0 auto;
+
+}
+
+.product-text {
+    font-size: 5vw;
+    color: white;
     text-align: center;
-    margin-left: 4%
+    line-height: 10vw;
+}
+
+.product-texta {
+    font-weight: 500;
+    margin-bottom: -4vw;
+}
+
+.product-textb {
+    color:#FAFF00;
 
 }
 
-/* Text="Current purchase of:" */
-
-.checktexta {
-    margin-bottom: -3vw;
-    font-weight: 600;
+@media (min-width: 430px) {
+    .product-box {
+        justify-content: start;
+        margin: 0 auto 0 auto;
+        width: 418px;
+    }
+    .productinfo {
+        margin: 0;
+    }
+    .product-text {
+        font-size: 22px;
+        margin: 0 auto 0 auto;
+        line-height: 2.6rem;
+    }
+    .product-texta {
+        margin-bottom: -1rem;
+    }
+    .product-img {
+        margin: 0.5rem;
+    }
 }
 
-/* Text="Compatability" */
+@media (min-width: 1080px) {
+    .checkout-wrap {
+        display: flex;
+        flex-direction: row;
+        width: 45rem;
+        background-color: #1B203D;
+        border: solid 2px #3f3f3f;
+        margin: -2rem auto 0 auto;
 
-.checktextc {
-    margin-bottom: -3vw;
-    font-weight: 600;
+    }
+    .product-box {
+        flex-direction: column;
+
+        border: none;
+        margin: 0;
+    }
+    .product-img {
+        display: block;
+        
+        margin: 0.5rem;
+        width: 270px;
+    }
+    .product-text {
+        font-size: 26px;
+        font-weight: 400;
+        margin: 0.2rem auto 0 auto;
+    }
+    .product-texta{
+        font-weight: 900;
+    }
 }
 
-/* Background for bill info */
+/* Bill info */
 
 .billinfobox {
-    background-color: #a5a4a4;
-    padding: 4vw;
-    margin-left: 3%;
-    margin-right: 3%;
-    border: solid 0.5vw #3f3f3f;
+    background-color: #c4c4c4;
+    padding: 1vw;
+    margin: 0 1vw 0 1vw;
+    border: solid 2px #3f3f3f;
 }
 
 .billingtitle {
     font-size: 7vw;
-    margin-top: 4%;
-    margin-left: 3.7vw;
-    padding-bottom: 5vw;
+    margin: 4vw 0 5vw 4.5vw;
 }
 
-.billinputboxes {
+.inputboxes {
     display: flex;
     flex-direction: column;
-    font-size: 5vw;
-    font-weight: 600;
 }
 
 .inputtitle {
-    padding-left: 4.3vw;
-    padding-bottom: 1vw;
-    padding-right: 1vw;
+    padding: 0 1vw 1vw 4.7vw;
+    font-weight: 600;
+    font-size: 5vw;
 }
 
 .inputbox {
-    width: 90%;
+    width: 87%;
     padding: 1vw;
     font-size: 5vw;
-    margin-left: 5%;
-    margin-right:5%;
-    margin-bottom: 4vw;
+    border: solid 1px #3f3f3f;
+    background-color: #e4dccc;
+    margin: 0 5vw 5vw 5vw;
 }
 
-/* Background for payment method */
+.number-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Overwrites .inputbox */
+.inputbox-postal {
+    width: 23vw;
+}
+
+.inputbox-phone {
+    width: 35vw;
+}
+
+@media (min-width: 431px) {
+    .billinfobox {
+        width: 418px;
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+    .billingtitle {
+        font-size: 30px;
+        margin: 1.3rem 0 1.5rem 1.3rem
+    }
+    .inputtitle {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0 0 0.2rem 1.3rem;
+    }
+    .inputbox {
+        width: 22.7rem;
+        padding: 5px;
+        font-size: 18px;
+        margin: 0 1.3rem 1.3rem 1.3rem;
+    }
+    .inputbox-postal {
+        width: 6rem;
+    }
+    
+    .inputbox-phone {
+        width: 9.5rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .paybox2 {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 0.5rem 0 auto;
+    }
+}
+
+/* Payment method */
 
 .paymentbox {
     margin-top: 3vw;
-    background: #a5a4a4;
-    padding: 4vw;
-    margin-left: 3%;
-    margin-right: 3%;
-    border: solid 0.5vw #3f3f3f;
+    background: #c4c4c4;
+    padding: 6vw;
+    margin: 4vw 1vw 0 1vw;
+    border: solid 2px #3f3f3f;
 }
 
 .paymenttitle {
     font-size: 7vw;
-    padding-top: 4vw;
-    padding-left: 5vw;
 }
 
 .cardrow {
     display: flex;
     flex-direction: row;
-    margin-left: 5%;
+
 
 }
 
 .cardimg {
     height: auto;
     width: 65%;
-    margin-top: -5vw;
-    margin-bottom: -5vw;
+    margin: -4vw 0 -5vw 0;
 }
 
 .chosenmethod {
     font-size: 6vw;
     font-weight: 600;
-    margin-top: 31.5vw;
+    margin-top: 35vw;
 }
 
 .changemethod {
     font-size: 4vw;
-    margin-top: 33.5vw;
-    margin-left: 1vw;
+    margin: 36.5vw 0 0 1vw;
     font-weight: 600;
     color: #f0062d;
     text-decoration: underline;
 }
 
-.expirationrow {
+.billinputboxes {
     display: flex;
+    flex-direction: column;
+}
+
+.inputtitle-method {
+    font-size: 5vw;
+    font-weight: 600;
+    margin: 0 0 4vw 0;
+}
+
+.method-crdnmbr {
+    width: 87%;
+    padding: 1vw;
+    font-size: 5vw;
+    border: solid 1px #3f3f3f;
+    background-color: #e4dccc; 
+    margin-bottom: 4vw;
+}
+
+.expirationrow {
     flex-direction: row;
+}
+
+.method-year,
+.method-cvc {
+    margin-left: 3vw;
 }
 
 .methodinputbox {
     width: 10%;
     padding: 1vw;
+    background-color: #e4dccc;
+    border: solid 1px #3f3f3f;
 }
+
+@media (min-width: 431px) {
+    .paymentbox {
+        margin-top: 1.5rem;
+        padding: 0;
+        margin: 1rem auto 0 auto;
+        width: 418px;
+    }
+    .paymenttitle {
+        font-size: 30px;
+        margin: 1.3rem 0 1.5rem 1.3rem;
+        padding: 0;
+    }
+    .cardrow {
+        margin-left: 1.3rem;
+    }
+    .cardimg {
+        height: auto;
+        width: 237px;
+        margin: -3rem 0 -1.5rem 0;
+    }
+    .chosenmethod {
+        font-size: 26px;
+        margin-top: 7.5rem;
+    }
+    .changemethod {
+        font-size: 1.1rem;
+        margin: 7.9rem 0 0 0.3rem;
+    }
+    .billinputboxes {
+        padding: 1.3rem;
+    }
+    .inputtitle-method {
+        font-size: 22px;
+        margin: 0 0 1rem 0;
+    }
+    .method-crdnmbr {
+        width: 14rem;
+        padding: 4px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    .method-year,
+    .method-cvc {
+    margin-left: 1rem;
+    }
+    .methodinputbox {
+    width: 2rem;
+    padding: 4px;
+    background-color: #e4dccc;
+    }
+}
+
+@media (min-width: 1080px) {
+    .paymentbox {
+        margin-top: 0;
+    }
+}
+
+/* Buttons */
 
 .checkoutbuttons {
     display: flex;
@@ -582,14 +1153,15 @@ html {
 }
 
 .checkoutbuttonbox {
-    width: 47vw;
+    width: 49vw;
+    height: 4rem;
 }
 
 .checkoutbuy,
 .checkoutcancel {
     background-color: #1B203D;
-    border-bottom:0.5vw solid #3f3f3f; 
-    border-right:0.5vw solid #3f3f3f;  
+    border-bottom: solid 2px #3f3f3f; 
+    border-right: solid 2px #3f3f3f;  
     font-size: 7vw;
     width: 100%;
     padding-top: 1.5vw;
@@ -599,45 +1171,90 @@ html {
 
 .checkoutbuy {
     color: #CD6F2B;
-    border-radius: 0vw 0vw 0vw 5vw;
-    border-left:0.5vw solid #3f3f3f;
+    border-radius: 0 0 0 40px;
+    border-left: solid 2px #3f3f3f;
 }
 
 .checkoutcancel{
     color: #f0062d;
-    border-radius: 0vw 0vw 5vw 0vw;
+    border-radius: 0 0 40px 0;
+}
+
+@media (min-width: 431px) {
+    .checkoutbuttonbox {
+        width: 211px;
+        height: 4rem;
+    }
+    .checkoutbuy,
+.checkoutcancel {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+}
+
+@media (min-width: 1080px) {
+    .checkoutbuttonbox {
+        margin-bottom: 0.5rem;
+    }
+    .checkoutbuy,
+    .checkoutcancel {
+        border-radius: 0px;
+    }
+    .checkoutbuy:hover,
+    .checkoutcancel:hover {
+        background-color: #2B3257;
+    }
 }
 
                                             /*>>> RECEIPT <<<*/
 
-/* Receipt image of treasure chest */
+/* Title and logo */
 
 .receipttreasure {
     height: auto;
-    width: 32vw;
+    width: 28vw;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4vw;
-    margin-bottom: -5.5vw;
+    margin: 0 auto 0 auto;
 }
-
-/* Receipt page title */
 
 .receipttitle {
     font-size: 10vw;
     color: beige;
     text-align: center;
-    margin-bottom: 5vw;
-    margin-top: 5vw;
+    margin-bottom: 12vw;
 }
 
 .receiptmessage {
+    margin: auto auto auto auto;
     background-color: #a5a4a4;
     border: solid 0.5vw #3f3f3f;
-    width: 52%;
-    font-size: 1.5em;
-    margin-left: 25%;
-    padding: 1vw;
+    width: 60vw;
+    font-size: 4vw;
+    padding: 3vw;
     text-align: center;
+}
+
+@media (min-width: 431px) {
+    .receipttreasure {
+        width: 120px;
+        height: auto;
+        margin-left: 4rem;
+    }
+    .receipttitle {
+        font-size: 44px;
+        margin: 0 auto 4rem 3rem;
+        text-align: left;
+    }
+    .receiptmessage {
+        font-size: 20px;
+        width: 20rem;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .receipttitle {
+        margin-bottom: 3rem;
+    }
 }

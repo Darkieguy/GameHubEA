@@ -3,82 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="This is where you pay for your chosen product.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub>Checkout</title>
     <link rel="stylesheet" href="./css/main.css" />
-</head>
-
-<body>
-    <img src="images/icons/pay-money2.svg" alt="Money in hand" class="paycheckout"/>
-    <h1 class="cotitle"> Checkout </h1>
-    <figure class="chosenproductbox">
-        <img src="images/assets/Black.jpg" alt="Game cover of the game Black" class="blackcheckout"/>
-        <figcaption class="productinfo">
-            <p1 class="checktexta"> Curent Purchase of: </p1>
-            <p1 class="checktextb"> Black </p1>
-            <p1 class="checktextc"> Compatibility: </p1>
-            <p1 class="checktextd"> PC, Console, Mobile </p1>
-            <p1 class="checktexte"> <b>Size:</b> 69GB </p1>
-            <p1 class="checktextf"> <b>Price:</b> $19.99 </p1>
-        </figcaption> 
-    </figure>
-
-    <figure class="billinfobox">
-        <h2 class="billingtitle"> Billing info </h2>
-        <figcaption class="billinputboxes">
-            <label for="fullname" class="inputtitle"> Full Name </label>
-            <input type="text" id="fullname" name="firstname" placeholder="Press to type" class="inputbox">
-            <label for="country" class="inputtitle"> Country </label>
-            <input type="text" id="country" name="country" class="inputbox">
-            <label for="city" class="inputtitle"> City </label>
-            <input type="text" id="city" name="city" class="inputbox">
-            <label for="email" class="inputtitle"> E-mail </label>
-            <input type="text" id="email" name="email" placeholder="Example@mail.com" class="inputbox">
-            <label for="address" class="inputtitle"> Address </label>
-            <input type="text" id="address" name="address" class="inputbox">
-            <label for="postalcode"  class="inputtitle"> Postal code </label>
-            <input type="text" id="postalcode" name="postalcode" class="inputbox">
-            <label for="phonenumber"  class="inputtitle"> Phone number </label>
-            <input type="text" id="phonenumber" name="phonenumber" class="inputbox">
-        </figcaption>
-    </figure>
-
-    <figure class="paymentbox">
-        <h2 class="paymenttitle"> Payment method </h2>
-        <figure class="cardrow">
-            <img src="images/icons/credit-card-6379.svg" alt="Credit card" class="cardimg">
-            <figcaption class="chosenmethod"> Card </figcaption>
-            <figcaption class="changemethod"> Change </figcaption>
-        </figure>
-        <figcaption class="billinputboxes">
-            <label for="cardnumber" class="inputtitle"> Card number </label>
-            <input type="text" id="cardnumber" name="cardnumber" placeholder="Press to type" class="inputbox">
-            <label for="expirationdate" class="inputtitle"> Expiration date and security code </label>
-            <figure class="expirationrow">
-                <label for="month" class="inputtitle"> mm </label>
-                <input type="text" id="country" name="country" class="methodinputbox">
-                <label for="year" class="inputtitle"> yyyy </label>
-                <input type="text" id="country" name="country" class="methodinputbox">
-                <label for="cvc" class="inputtitle"> CVC </label>
-                <input type="text" id="country" name="country" class="methodinputbox">
-            </figure>
-        </figcaption>
-    </figure>
-    
-    <figure class="checkoutbuttons">
-        <a href="receipt.html" class="checkoutbuttonbox"><button class="checkoutbuy"> Buy </button></a>
-        <form class="checkoutbuttonbox">
-            <input type="button" value="Cancel" onclick="history.back()" class="checkoutcancel">
-        </form>
-    </figure>
-
-    <nav class="navbarmobile">
+    <nav class="navbar">
         <ul><a href="index.html"> <img src="images/icons/mushroom-housewhitebg.svg" alt="Mushroom house" class="navicon"/> Home </a></ul>
         <ul><a href="gamelist.html"> <img src="images/icons/warlord-helmet.svg" alt="Warlords helmet" class="navicon"/> Games </a></ul>
         <ul><a href="about.html"> <img src="images/icons/book-cover2.svg" alt="book cover" class="navicon"/> About </a></ul>
         <ul><a href="contact.html"> <img src="images/icons/scroll-quillicon.svg" alt="Scroll and quill" class="navicon"/> Contact </a></ul>
         <ul><a href="login.html"> <img src="images/icons/tavern-sign2.svg" alt="Scroll and quill" class="navicon"/> Login </a></ul>
     </nav>
-
+</head>
+<body>
+    <img src="images/icons/pay-money2.svg" alt="Money in hand" class="paycheckout"/>
+    <h1 class="cotitle"> Checkout </h1>
+    <div class="checkout-wrap">
+        <div class="product-box">
+            <img src="images/assets/Black.jpg" alt="Game cover of the game Black" class="product-img"/>
+            <div class="productinfo">
+                <p1 class="product-text product-texta"> Current Purchase of: </p1>
+                <p2 class="product-text product-textb"> Black </p2>
+                <p1 class="product-text product-texta"> Compatibility: </p1>
+                <p2 class="product-text product-textb"> PC, Console, Mobile </p2>
+                <p1 class="product-text product-textc"> <b> Size: </b><p2 class="product-textb"> 69GB </p2></p1>
+                <p1 class="product-text product-textc"> <b>Price:</b><p2 class="product-textb"> $19.99 </p2></p1>
+            </div> 
+        </div>
+        <div class="paybox2">
+            <div class="billinfobox">
+                <h2 class="billingtitle"> Billing info </h2>
+                <div class="inputboxes">
+                    <label for="fullname" class="inputtitle"> Full Name </label>
+                    <input type="text" id="fullname" name="firstname" placeholder="Press to type" class="inputbox">
+                    <label for="country" class="inputtitle"> Country </label>
+                    <input type="text" id="country" name="country" class="inputbox">
+                    <label for="city" class="inputtitle"> City </label>
+                    <input type="text" id="city" name="city" class="inputbox">
+                    <label for="email" class="inputtitle"> E-mail </label>
+                    <input type="text" id="email" name="email" placeholder="Example@mail.com" class="inputbox inputbox-mail">
+                    <label for="address" class="inputtitle"> Address </label>
+                    <input type="text" id="address" name="address" class="inputbox inputbox-address">
+                    <div class="number-row">
+                        <div class="number-column">
+                            <label for="phonenumber"  class="inputtitle"> Phone number </label>
+                            <input type="text" id="phonenumber" name="phonenumber" class="inputbox inputbox-phone">
+                        </div>
+                        <div class="postal-column">
+                            <label for="postalcode"  class="inputtitle"> Postal code </label>
+                            <input type="text" id="postalcode" name="postalcode" placeholder="" class="inputbox inputbox-postal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentbox">
+                <h2 class="paymenttitle"> Payment method </h2>
+                <div class="cardrow">
+                    <img src="images/icons/credit-card-6379.svg" alt="Credit card" class="cardimg">
+                    <div class="chosenmethod"> Card </div>
+                    <div class="changemethod"> Change </div>
+                </div>
+                <div class="billinputboxes">
+                    <label for="cardnumber" class="inputtitle-method"> Card number </label>
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="5555-5555-5555-5555" class="method-crdnmbr">
+                    <label for="month" class="expiration-input inputtitle-method"> Expiration date and security code </label>
+                    <div class="expirationrow">
+                        <label for="month" class="inputtitle-method"> mm: </label>
+                        <input type="text" id="month" name="month" class="methodinputbox">
+                        <label for="year" class="method-year inputtitle-method"> yyyy: </label>
+                        <input type="text" id="year" name="year" class="methodinputbox">
+                        <label for="cvc" class="method-cvc inputtitle-method"> CVC: </label>
+                        <input type="text" id="cvc" name="cvc" class="methodinputbox">
+                    </div>
+                </div>
+            </div>
+            <div class="checkoutbuttons">
+                <a href="receipt.html" class="checkoutbuttonbox"><button class="checkoutbuy"> Buy </button></a>
+                <form class="checkoutbuttonbox">
+                    <input type="button" value="Cancel" onclick="history.back()" class="checkoutcancel">
+                </form>
+            </div>
+        </div>
+    </div>    
 </body>
+</html>

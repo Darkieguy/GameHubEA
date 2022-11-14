@@ -3,50 +3,64 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Information about selected game.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Hub>Game info</title>
+    <title> Game Hub>Game info </title>
     <link rel="stylesheet" href="./css/main.css" />
-</head>
 
-<body>
-    <h1 class="gititle"> Game info </h1>
-    <img src="images/assets/Black.jpg" alt="Game cover of the game Black" class="gipics"/>
-    <img src="images/pramod-tiwari-Z0qkDYBODuo-unsplash.jpg" alt="Car by gas station" class="gipics"/>
-    <p1 class="gamedesc"> Black is a futuristic dark survival game. 
-        One day when driving home from work,
-        a comet passes over you, making you lose conciousness. 
-        When you wake up, you’ve crashed your car into a tree.
-    </p1>
-    <img src="images/pramod-tiwari-W3-5JT33AVM-unsplash.jpg" alt="Man in alley" class="gipics"/>
-    <p1 class="gamedesc">
-        Distant howls alert you as you try to pull yourself together. 
-        Your door looks to be smashed stuck, but as you push to open it,
-        the door melts by your touch..
-    </p1>
-    <img src="images/pramod-tiwari-2pbxXa4x18c-unsplash.jpg" alt="Man standing by car in a tunnel" class="gipics"/>
-    <img src="images/assets/Playbox.jpg" alt="Playbox logo" class="gipics"/>
-    <figure class="gdetailsbox">
-        <figcaption class="giinfotext">
-            <p1 class="detailtexta"> Number of players: </p1>
-            <p1 class="detailtextb"> Single </p1>
-            <p1 class="detailtextc"> Supported controllers: </p1>
-            <p1 class="detailtextd"> Mouse & Keyboard, PS, X </p1>
-            <p1 class="detailtexte"> Estimated story length: </p1>
-            <p1 class="detailtextf"> 32 hours </p1>
-            <p1 class="detailtextg"> Storage space required: </p1>
-            <p1 class="detailtexth"> 69GB </p1>
-            <p1 class="detailtexti"> Price: </p1>
-            <p1 class="detailtextj"> $19.99 </p1>
-            <a href="checkout.html" class="gibuy"><button type="button" class="gibutton"> <u> Buy </u></button></a>
-        </figcaption>
-    </figure>
-
-    <nav class="navbarmobile">
+    <nav class="navbar">
         <ul><a href="index.html"> <img src="images/icons/mushroom-housewhitebg.svg" alt="Mushroom house" class="navicon"/> Home </a></ul>
         <ul><a href="gamelist.html"> <img src="images/icons/warlord-helmet.svg" alt="Warlords helmet" class="navicon"/> Games </a></ul>
         <ul><a href="about.html"> <img src="images/icons/book-cover2.svg" alt="book cover" class="navicon"/> About </a></ul>
         <ul><a href="contact.html"> <img src="images/icons/scroll-quillicon.svg" alt="Scroll and quill" class="navicon"/> Contact </a></ul>
         <ul><a href="login.html"> <img src="images/icons/tavern-sign2.svg" alt="Scroll and quill" class="navicon"/> Login </a></ul>
     </nav>
+</head>
+
+<body>
+
+    <img src="images/icons/info1.svg" alt="infoicon" class="infoicon"/>
+    <h1 class="gi-title"> Game info </h1>
+
+    <div class="gi-wrapper">
+        <img src="images/assets/Black.jpg" alt="Game cover of the game Black" id="gi-black" class="gi-black gi-pics"/>
+        <img src="images/pramod-tiwari-Z0qkDYBODuo-unsplash.jpg" alt="Car by gas station" class="gi-gas gi-pics"/>
+
+            <p1 class="gamedesc"> Black is a futuristic dark survival game.<br> 
+                One day when driving home from work,<br>
+                a comet passes over you, making you<br>
+                lose conciousness. When you wake up,<br> 
+                you’ve crashed your car into a tree.<br><br>
+
+                Distant howls alert you as you try to<br>
+                pull yourself together. Your door looks<br> 
+                to be smashed stuck, but as you push to<br>
+                open it, the door melts by your touch..
+            </p1>
+
+        <img src="images/pramod-tiwari-W3-5JT33AVM-unsplash.jpg" alt="Man in alley" class="gi-alley gi-pics"/>
+        <img src="images/pramod-tiwari-2pbxXa4x18c-unsplash.jpg" alt="Man standing by car in a tunnel" class="gi-tunnel gi-pics"/>
+        
+        <div class="playbox-column">
+            <img src="images/assets/Playbox.jpg" alt="Playbox logo" class="gi-playbox gi-pics"/>
+            <div class="detailbox">
+                <div class="giinfotext">
+                    <p1 class="detailtext detailtexta"> Number of players: </p1>
+                    <p1 class="detailtext detailtextb"> Single </p1>
+                    <p1 class="detailtext detailtexta"> Supported controllers: </p1>
+                    <p1 class="detailtext detailtextb"> Mouse & Keyboard, PS, X </p1>
+                    <p1 class="detailtext detailtexta"> Estimated story length: </p1>
+                    <p1 class="detailtext detailtextb"> 32 hours </p1>
+                    <p1 class="detailtext detailtexta"> Storage space required: </p1>
+                    <p1 class="detailtext detailtextb"> 69GB </p1>
+                    <p1 class="detailtext detailtexta"> Price: </p1>
+                    <p1 class="detailtext detailtextb"> $19.99 </p1>
+                    <a href="checkout.html" class="gibuy"><button type="button" class="gibutton"> <u> Buy </u></button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html>
