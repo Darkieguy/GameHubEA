@@ -896,30 +896,35 @@ html {
         display: flex;
         flex-direction: row;
         width: 45rem;
-        background-color: #1B203D;
+        background-color: #c4c4c4;
         border: solid 2px #3f3f3f;
         margin: -2rem auto 0 auto;
 
     }
     .product-box {
         flex-direction: column;
-
         border: none;
         margin: 0;
+        background-color: #c4c4c4;
     }
     .product-img {
         display: block;
-        
         margin: 0.5rem;
         width: 270px;
     }
     .product-text {
         font-size: 26px;
-        font-weight: 400;
+    
         margin: 0.2rem auto 0 auto;
     }
-    .product-texta{
+    .product-texta,
+    .product-textc {
         font-weight: 900;
+        color: black;
+    }
+    .product-textb {
+        color: black;
+        font-weight: 400;
     }
 }
 
